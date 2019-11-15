@@ -16,7 +16,7 @@ This is the short version of the host name and not the FQDN.
 
 ### SMTP_SERVER
 
-Specify the server and port for the server that will actually be trasmitting the email. 
+Specify the server and port for the server that will actually be transmitting the email. 
 
 For example:
 
@@ -32,7 +32,7 @@ START_TLS="-S smtp-use-starttls"
 
 ### Message Source - Destination
 
-I recommend that you use a fake email address for this purpose but make it identifieable so that you can understand the source easily.
+I recommend that you use a fake email address for this purpose but make it identifiable so that you can understand the source easily.
 
 ```ini
 SENDER="noreply-$MY_HOSTNAME@uconn.edu"
@@ -42,4 +42,12 @@ The recipient would be your cellphone in most cases.
 
 ```ini
 RECIPIENT="555-555-1212@txt.att.net"
+```
+
+## Installation
+
+Modify ```/etc/pam.d/sshd```
+
+```text
+session optional pam_exec.so seteuid /path/to/login-notify.sh
 ```
