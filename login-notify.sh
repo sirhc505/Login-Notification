@@ -3,9 +3,9 @@
 # Change these two lines:
 
 MY_HOSTNAME=`hostname -s`
-SMTP_SERVER="smtp.uconn.edu:587"
+SMTP_SERVER="smtp.uconn.edu"
 # Comment out to not use
-START_TLS="-S smtp-use-starttls"
+# START_TLS="-S smtp-use-starttls"
 
 SENDER="noreply-$MY_HOSTNAME@uconn.edu"
 RECIPIENT="8603167617@txt.att.net"
